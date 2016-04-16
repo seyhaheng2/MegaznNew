@@ -1,0 +1,25 @@
+<div class="widget">
+	<h1 class="section-title title">What's New</h1>
+	<ul class="post-list">
+		<% @posts.each do |post| %>
+		<% if post.format_post == "new" %>
+			<li>
+				<div class="post small-post">
+					<div class="entry-header">
+						<div class="entry-thumbnail">
+						<img class="img-responsive" src="assets/rising/8.jpg" alt="">
+							<%#= image_tag post.image, size: "150", class: "img-responsive" %>
+						</div>
+					</div>
+					<div class="post-content">								
+						<div class="video-catagory"><a href="#">World</a></div>
+						<h2 class="entry-title">
+							<%= link_to post.title %>
+						</h2>
+					</div>
+				</div><!--/post--> 
+			</li>
+			<% end %>
+		<% end %>
+	</ul>
+</div><!--/#widget-->	

@@ -1,0 +1,47 @@
+<div class="page-header">
+  <%= link_to posts_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_post_path(@post), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show post</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Title:</dt>
+  <dd><%= @post.title %></dd>
+
+  <dt>Image:</dt>
+  <dd><%= @post.image %></dd>
+
+  <dt>Description:</dt>
+  <dd><%= @post.description %></dd>
+
+  <dt>Format post:</dt>
+  <dd><%= @post.format_post %></dd>
+
+  <dt>Hide post:</dt>
+  <dd><%= @post.hide_post %></dd>
+
+  <dt>Ads:</dt>
+  <dd><%= @post.ads %></dd>
+
+  <dt>Excerpt:</dt>
+  <dd><%= @post.excerpt %></dd>
+
+  <dt>Category:</dt>
+  <dd><%= @post.category %></dd>
+
+  <dt>User:</dt>
+  <dd><%= @post.user %></dd>
+
+  <dt>Meta title:</dt>
+  <dd><%= @post.meta_title %></dd>
+
+  <dt>Meta description:</dt>
+  <dd><%= @post.meta_description %></dd>
+
+</dl>

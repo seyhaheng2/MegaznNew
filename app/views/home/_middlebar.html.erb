@@ -1,0 +1,134 @@
+<div class="left-content">
+
+		<!-- <div class="section add inner-add">
+			<a href="#"><img class="img-responsive" src="assets/add/add4.jpg" alt="" /></a>
+		</div>
+		-->
+
+		<div class="section photo-gallery">
+			<h1 class="section-title title">What's Slide</h1>	
+			<!-- <div class="cat-menu">         
+				<a href="listing.html">See all</a>					
+			</div> -->
+			<div id="photo-gallery" class="carousel slide carousel-fade post" data-ride="carousel">						
+				<div class="carousel-inner">
+					<div class="item active">
+						<a href="#"><img class="img-responsive" src="assets/gallery/1.jpg" alt="" /></a>
+						<h2><a href="#">No one can agree on how a dog is supposed to wear human pants</a></h2>
+					</div>
+					<div class="item">
+						<a href="#">
+						<img class="img-responsive" src="assets/gallery/2.jpg" alt="" /></a>
+						<h2><a href="#">500-pound elephant seal causes traffic jam while repeatedly</a></h2>
+					</div>
+					<div class="item">
+						<a href="#"><img class="img-responsive" src="assets/gallery/3.jpg" alt="" /></a>
+						<h2><a href="#">I rode a Metroboard electric skateboard 30 miles around Manhattan</a></h2>
+					</div>
+					<div class="item">
+						<a href="#"><img class="img-responsive" src="assets/gallery/4.jpg" alt="" /></a>
+						<h2><a href="#">The super creepy side of the Internet of Things and smart homes</a></h2>
+					</div>
+					<div class="item">
+						<a href="#"><img class="img-responsive" src="assets/gallery/5.jpg" alt="" /></a>
+						<h2><a href="#">Mirum est notare quam littera gothica, quam nunc putamus parum claram</a></h2>
+					</div>
+					<div class="item">
+						<a href="#"><img class="img-responsive" src="assets/gallery/6.jpg" alt="" /></a>
+						<h2><a href="#">Someone has calculated the total cost of saving Matt Damon</a></h2>
+					</div>
+					<div class="item">
+						<a href="#"><img class="img-responsive" src="assets/gallery/7.jpg" alt="" /></a>
+						<h2><a href="#">Wet wedding: Yorkshire couple dons wellies to tie the knot in flooded town</a></h2>
+					</div>
+					<div class="item">
+						<a href="#"><img class="img-responsive" src="assets/gallery/8.jpg" alt="" /></a>
+						<h2><a href="#">This dog is so stoked for his Christmas present he can hardly stand it</a></h2>
+					</div>
+					<div class="item">
+						<a href="#"><img class="img-responsive" src="assets/gallery/9.jpg" alt="" /></a>
+						<h2><a href="#">The world's richest people lost $19 billion in 2015, but Jeff Bezos</a></h2>
+					</div>
+				</div><!--/carousel-inner-->
+
+				<ol class="gallery-indicators carousel-indicators">
+					<li data-target="#photo-gallery" data-slide-to="0" class="active">
+						<img class="img-responsive" src="assets/gallery/thumb1.png" alt="" />
+					</li>
+					<li data-target="#photo-gallery" data-slide-to="1">
+						<img class="img-responsive" src="assets/gallery/thumb2.png" alt="" />
+					</li>
+					<li data-target="#photo-gallery" data-slide-to="2">
+						<img class="img-responsive" src="assets/gallery/thumb3.png" alt="" />
+					</li>
+					<li data-target="#photo-gallery" data-slide-to="3">
+						<img class="img-responsive" src="assets/gallery/thumb4.png" alt="" />
+					</li>
+					<li data-target="#photo-gallery" data-slide-to="4">
+						<img class="img-responsive" src="assets/gallery/thumb5.png" alt="" />
+					</li>
+					<li data-target="#photo-gallery" data-slide-to="5">
+						<img class="img-responsive" src="assets/gallery/thumb6.png" alt="" />
+					</li>
+					<li data-target="#photo-gallery" data-slide-to="6">
+						<img class="img-responsive" src="assets/gallery/thumb7.png" alt="" />
+					</li>
+					<li data-target="#photo-gallery" data-slide-to="7">
+						<img class="img-responsive" src="assets/gallery/thumb8.png" alt="" />
+					</li>
+					<li data-target="#photo-gallery" data-slide-to="8">
+						<img class="img-responsive" src="assets/gallery/thumb9.png" alt="" />
+					</li>
+				</ol>
+
+				<div class="gallery-turner">
+					<a class="left-photo" href="#photo-gallery" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+					<a class="right-photo" href="#photo-gallery" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="section lifestyle-section">
+			<h1 class="section-title">What's Rising</h1>
+				<!--<div class="cat-menu">         
+					<a href="listing-life-style.html">See all</a>
+				</div> -->
+		<% @posts.each do |post| %>
+			<% if post.format_post == "rising" %>
+				
+				<div class="col-sm-6 col-md-12 " style="padding:0px;">
+									<div class="left-content">
+										<div class="sports-news">											
+											<div class="post">
+												<div class="entry-header">
+													<div class="entry-thumbnail">
+														<img class="img-responsive" src="assets/post/w2.jpg" alt="" />
+
+													</div>
+												</div>
+												<div class="post-content">								
+													<div class="entry-meta">
+														<ul class="list-inline">
+															<li class="publish-date"><a href="#"><i class="fa fa-clock-o"></i> Nov 15, 2015 </a></li>
+															<li class="views"><a href="#"><i class="fa fa-eye"></i>15k</a></li>
+															<li class="loves"><a href="#"><i class="fa fa-heart-o"></i>278</a></li>
+															<li class="comments"><i class="fa fa-comment-o"></i><a href="#">189</a></li>
+														</ul>
+													</div>
+													<h2 class="entry-title">
+														<%= link_to post.title, root_path %>
+													</h2>
+													<div class="entry-content">
+														<p><%= truncate(post.description) %></p>
+													</div>
+												</div>
+											</div><!--/post--> 
+										</div><!--/.section-->	
+									
+									</div><!--/.left-content-->
+								</div>
+			<% end %>
+		<% end %>
+		</div><!--/.lifestyle -->		
+</div><!--/.left-content-->
