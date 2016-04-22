@@ -24,26 +24,21 @@
 //= require main
 //= require switcher
 //= require masonry/jquery.masonry
+//= require react
+//= require react_ujs
+//= require components
+//= require ajaxify_rails
+//= require jquery.infinite-pages
 
 
 
 
 window.onload = function() {
-
-            
-
-  $('#masonry-container').masonry({
-    itemSelector: '.vbox',
-     animationOptions {
-	    duration: 500,
-	    queue: false
-	  },
-	  gutterWidth: 0,
-	  isAnimated: false,
-	  isFitWidth: false,
-	  isRTL: false,
-	  isResizable: false
-	}
-  });
-
-};
+    $('#masonry-container').masonry({
+        itemSelector: '.vbox',
+        isAnimated: true,
+        isFitWidth: true,
+        isRTL: false,
+        isResizable: false
+    });
+}

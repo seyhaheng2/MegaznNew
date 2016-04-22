@@ -1,8 +1,8 @@
 <div class="widget">
 	<h1 class="section-title title">What's New</h1>
 	<ul class="post-list">
-		<% @posts.each do |post| %>
-		<% if post.format_post == "new" %>
+		<% @new.each do |post| %>
+			<%# if post.format_post == "new" %>
 			<li>
 				<div class="post small-post">
 					<div class="entry-header">
@@ -19,7 +19,7 @@
 					</div>
 				</div><!--/post--> 
 			</li>
-			<% end %>
+			<%# end %>
 		<% end %>
 	</ul>
 </div><!--/#widget-->	

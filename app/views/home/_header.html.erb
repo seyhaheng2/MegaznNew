@@ -2,14 +2,16 @@
 		<div class="navbar" role="banner">
 			<div class="container">
 				<a class="secondary-logo" href="index-2.html">
-					<img class="img-responsive" src="assets/logo.png" alt="logo">
+					<%= image_tag "logo.png", class: "img-responsive" %>		
 				</a>
 			</div>
 			<div class="topbar">
 				<div class="container">
 					<div id="topbar" class="navbar-header">							
-						<a class="navbar-brand" href="index-2.html">
-							<img class="main-logo img-responsive" src="assets/logo.png" alt="logo">
+
+						<%= link_to root_path , class: "navbar-brand" do  %>
+							 <%= image_tag "logo.png", class: "main-logo img-responsive" %>	
+						<% end %>
 						</a>
 
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">

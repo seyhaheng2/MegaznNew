@@ -2,13 +2,13 @@
 									<div class="section sports-section">
 										<h1 class="section-title title">What's Hot</h1>
 
-										<% @posts.each do |post| %>
-											<% if post.format_post == "hot" %>
+										<% @hots.each do |post| %>
+											<%# if post.format_post == "hot" %>
 												<div class="post medium-post">
 													<div class="entry-header">
 														<div class="entry-thumbnail">
 
-														<img class="img-responsive" src="assets/sports/2.jpg" alt="">
+														<img class="img-responsive" src="assets/post/2.jpg" alt="">
 															<%#= image_tag post.image, class: "img-responsive" %>
 														</div>
 													</div>
@@ -25,7 +25,7 @@
 														</h2>
 													</div>
 												</div><!--/post--> 
-											<% end %>
+											<%# end %>
 										<% end %>
 
 									</div><!--/.sports-section -->
